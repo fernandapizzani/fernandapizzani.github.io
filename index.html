@@ -1,11 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Teste meu portifólio</h1>
-</body>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maria Fernanda Pizzani | Portifólio</title>
+    <!-- devicon -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="particles"></div>
+
+    <nav class="nav-bar">
+      <ul id="menu">
+        <li><a href="#beginning" id="menu-link"> Início </a></li>
+        <li><a href="#about" id="menu-link"> Sobre </a></li>
+        <li><a href="#projects" id="menu-link"> Projetos </a></li>
+        <li><a href="#contact" id="menu-link"> Contato </a></li>
+      </ul>
+    </nav>
+
+    <main id="beginning" class="header">
+      <img
+        src="./img/fernandapizzani.jpeg"
+        alt="Foto de Maria Fernanda Pizzani"
+        id="profile-picture"
+      />
+      <h1>Maria Fernanda Pizzani</h1>
+      <p id="header-sub-title">
+        Estudante Análise e Desenvolvimentos de Sistemas
+      </p>
+    </main>
+
+    <section id="about" class="about-projects-contact">
+      <h2 id="about-projects-contact-title">Sobre Mim</h2>
+      <div id="about-box">
+        <p id="about-paragraph">
+          Olá! Sou uma estudante de Análise e Desenvolvimento de Sistemas
+          apaixonada por UI/UX Design, Desenvolvimento Front-end e Product
+          Design. Atualmente estou me profissionalizando em Desenvolvimento
+          Mobile e em Design voltado a User Experience e User Interface, com a
+          finalidade de me tornar uma desenvolvedora front-end completa.
+        <div id="icons">
+            <i class="devicon-flutter-plain colored"></i>
+            <i class="devicon-dart-plain colored"></i>
+            <i class="devicon-kotlin-plain colored"></i>
+            <i class="devicon-html5-plain colored"></i>
+            <i class="devicon-css3-plain colored"></i>
+            <i class="devicon-javascript-plain colored"></i>
+            <i class="devicon-php-plain colored"></i>
+            <i class="devicon-mysql-original colored"></i>
+            <i class="devicon-git-plain colored"></i>
+            <i class="devicon-github-original"></i>
+            <i class="devicon-figma-plain colored"></i>
+        </div>
+        </p>
+
+      </div>
+    </section>
+
+    <section id="projects" class="about-projects-contact">
+      <h2 id="about-projects-contact-title">Meus Projetos</h2>
+      <div id="projects-box">
+        <div class="projects-card">
+          <img src="./img/sla.webp" alt="Projeto 1" class="projects-image" />
+          <div class="projects-text-box">
+            <h3 class="project-info">hihihi</h3>
+          <p class="projects-paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            mollitia aliquid enim voluptates exercitationem expedita possimus
+            libero eum, laborum repudiandae tempora pariatur minus, dignissimos
+            perspiciatis, sit dolore quasi neque atque.
+          </p>
+          </div>
+        </div>
+        <div class="projects-card">
+          <img src="./img/sla.webp" alt="Projeto 2" class="projects-image" />
+          <div class="projects-text-box">
+            <h3 class="project-info">hihihi</h3>
+          <p class="projects-paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            mollitia aliquid enim voluptates exercitationem expedita possimus
+            libero eum, laborum repudiandae tempora pariatur minus, dignissimos
+            perspiciatis, sit dolore quasi neque atque.
+          </p>
+          </div>
+        </div>
+        <div class="projects-card">
+          <img src="./img/sla.webp" alt="Projeto 3" class="projects-image" />
+          <div class="projects-text-box">
+            <h3 class="project-info">hihihi</h3>
+          <p class="projects-paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            mollitia aliquid enim voluptates exercitationem expedita possimus
+            libero eum, laborum repudiandae tempora pariatur minus, dignissimos
+            perspiciatis, sit dolore quasi neque atque.
+          </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="about-projects-contact">
+      <h2 id="about-projects-contact-title">Entre em contato</h2>
+        <form action="https://formsubmit.co/1f6da7e8405782baea1dac5f1e23d503" method="POST" id="contact-form">
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Nome" required class="form-camp" />
+        </div>
+        <div class="form-group">
+            <textarea name="message" placeholder="Digite sua mensagem" rows="6" required class="form-camp"></textarea>
+        </div>
+        <!-- anti-spam -->
+        <input type="hidden" name="_captcha" value="false">
+        <button type="submit">Enviar e-mail</button>
+        </form>
+    </section>
+
+  </body>
 </html>
