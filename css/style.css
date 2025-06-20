@@ -95,7 +95,7 @@ h1{
 
 .about-projects-contact{
     padding: 6rem 2rem;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #about-projects-contact-title{
@@ -238,4 +238,16 @@ button:hover{
     50%{
         transform: translateY(-20px);
     }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem; /* ou ajuste conforme necessário */
+    text-align: center;
+  }
+
+  #header-sub-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }
