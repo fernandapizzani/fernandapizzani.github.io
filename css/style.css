@@ -1,0 +1,253 @@
+/* geral */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --primary: #5f23be;
+    --secondary: #28025a;
+    --dark: #140a1f;
+    --darker: #110b06;
+    --bright: #e2e8f0;
+    --glass: rgba(255,255,255, 0.1);
+}
+
+body{
+    color: var(--bright);
+    background-color: var(--dark);
+}
+
+.nav-bar{
+    position: fixed;
+    top: 0;
+    background: rgba(20, 10, 31, 0.8);
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+#menu{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+#menu-link{
+    text-decoration: none;
+    color: var(--bright);
+    font-weight: 500;
+    position: relative;
+    padding: .5rem 0;
+}
+
+#menu-link::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    transition: width .5s ease;
+}
+
+#menu-link:hover:after{
+    width: 100%;
+}
+
+.header{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#profile-picture{
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 0 40px rgba(111, 5, 250, 0.6);
+    border-radius: 50%;
+    border: 4px solid var(--glass);
+    animation: float 5s ease-in-out infinite;
+}
+
+h1{
+    font-size: 3.5rem;
+    color: var(--primary);
+    font-weight: bold;
+    margin: 20px;
+}
+
+#header-sub-title{
+    font-size: 1.5rem;
+}
+
+
+.about-projects-contact{
+    padding: 6rem 2rem;
+    min-height: 100vh;
+}
+
+#about-projects-contact-title{
+    margin-top: 8rem;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#about-box{
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--glass);
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+#about-paragraph, #icons{
+    text-align: center;
+    font-size: 1rem;
+}
+
+#icons{
+    margin-top: 1rem;
+}
+
+i{
+    font-size: 43px;
+}
+
+#projects-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-image{
+    height: 230px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.projects-card{
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--glass);
+    overflow: hidden;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+
+.projects-card:hover{
+    box-shadow: 0 10px 20px rgba(111, 5, 250, 0.2);
+    transform: translateY(-10px) scale(1.03);
+}
+
+.projects-text-box{
+    padding: 1.5rem;
+}
+
+
+.project-info{
+    margin-bottom: 8px;
+}
+
+.projects-paragraph{
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.25rem;
+}
+
+#contact-form{
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid var(--glass);
+    border-radius: 16px;
+}
+
+.form-group{
+    margin-bottom: 1.5rem;
+}
+
+.form-camp{
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid var(--glass);
+    outline: none;
+}
+
+.form-camp:focus{
+    border-color: var(--secondary);
+    box-shadow: 0 0 10px rgba(61, 18, 110, 0.3);
+}
+
+button{
+    color: var(--bright);
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .5s ease;
+}
+
+button:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(126, 70, 229, 0.4);
+}
+
+.particles{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .5;
+    background: 
+    radial-gradient(circle at 10% 20%, var(--primary) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, var(--secondary) 0%, transparent 20%),
+    var(--darker);
+}
+
+@keyframes float{
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem; /* ou ajuste conforme necessário */
+    text-align: center;
+  }
+
+  #header-sub-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
